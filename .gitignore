@@ -1,0 +1,9 @@
+# 컴파일 산출물
+cli
+serv
+*.o
+
+# 실행 중 생성되는 파일
+test.txt
+received_backend.bin
+*.bin

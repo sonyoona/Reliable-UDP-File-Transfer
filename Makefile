@@ -18,4 +18,4 @@ cli: file_transfercli.c file_transfer.h
 
 # 컴파일로 생성된 바이너리 파일들을 삭제하는 규칙 (make clean)
 clean:
-	rm -f $(TARGETS) received.txt test.txt
+	rm -f $(TARGETS) received_backend.bin test.txt
