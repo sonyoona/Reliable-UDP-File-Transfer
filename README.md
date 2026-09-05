@@ -213,13 +213,16 @@ diff test.txt received_backend.bin && echo "무결성 검증 통과"
 # 1. 빌드
 make
 
-# 2. 수신 서버 실행 (터미널 1)
+# 2. 테스트용 파일 생성 (10MB)
+dd if=/dev/zero of=test.txt bs=1M count=10
+
+# 3. 수신 서버 실행 (터미널 1)
 ./serv 9190
 
-# 3. 파일 전송 (터미널 2)
+# 4. 파일 전송 (터미널 2)
 ./cli 127.0.0.1 9190 test.txt
 
-# 4. 무결성 확인
+# 5. 무결성 확인
 diff test.txt received_backend.bin
 ```
 
